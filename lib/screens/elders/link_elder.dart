@@ -76,7 +76,7 @@ class _LinkElderState extends State<LinkElder> {
                       child: TextField(
                         controller: controller,
                         decoration: InputDecoration(
-                            hintText: 'Enter code received from Elderly Care',
+                            hintText: 'Enter code received from Saathi',
                             enabledBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(10)),
                             disabledBorder: OutlineInputBorder(

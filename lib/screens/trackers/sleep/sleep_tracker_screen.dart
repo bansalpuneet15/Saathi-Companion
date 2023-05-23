@@ -44,8 +44,8 @@ class _SleepTrackerScreenState extends State<SleepTrackerScreen> {
   String userId;
   double averageSleep;
   SleepTracker sleepTracker;
+  Relative relative = Relative();
   getDocumentList() async {
-    Relative relative = Relative();
     relativeSnapshot = await FirebaseFirestore.instance
         .collection('relatives')
         .doc(userId)
@@ -116,11 +116,11 @@ class _SleepTrackerScreenState extends State<SleepTrackerScreen> {
                                 borderRadius: BorderRadius.circular(10)),
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
-                              // child: TimeChart(
-                              //   animate: true,
-                              //   userID: userId,
-                              // ),
-                              child: Text('Hello'),
+                              child: TimeChart(
+                                animate: true,
+                                userID: relative.elderUID,
+                              ),
+                              // child: Text('Hello'),
                             ),
                             margin: EdgeInsets.all(8),
                           ),

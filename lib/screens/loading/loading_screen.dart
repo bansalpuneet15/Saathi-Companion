@@ -52,13 +52,13 @@ class _LoadingScreenState extends State<LoadingScreen> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: <Widget>[
                         Text(
-                          'Elderly ',
+                          'Saathi ',
                           style: TextStyle(
                             fontSize: 30.0,
                           ),
                         ),
                         Text(
-                          'Companion',
+                          'Sampark',
                           style: TextStyle(
                             color: Colors.green,
                             fontSize: 30.0,

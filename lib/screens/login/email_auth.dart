@@ -75,7 +75,7 @@ class _EmailRegisterState extends State<EmailRegister> {
                       Padding(
                         padding: EdgeInsets.all(8.0),
                         child: Text(
-                          'Register to\nElderly Companion',
+                          'Register to\nSaathi Sampark',
                           style: TextStyle(fontSize: 25),
                         ),
                       ),

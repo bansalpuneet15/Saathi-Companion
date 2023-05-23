@@ -44,14 +44,14 @@ class AppDrawer extends StatelessWidget {
                               mainAxisSize: MainAxisSize.min,
                               children: <Widget>[
                                 Text(
-                                  'Elderly ',
+                                  'Saathi ',
                                   style: TextStyle(
                                     fontWeight: FontWeight.w100,
                                     fontSize: 32.0,
                                   ),
                                 ),
                                 Text(
-                                  'Companion',
+                                  'Sampark',
                                   style: TextStyle(
                                     fontWeight: FontWeight.w100,
                                     fontSize: 32.0,
@@ -194,9 +194,9 @@ class ElderlyAppBar extends StatelessWidget implements PreferredSizeWidget {
           title: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text('Elderly '),
+              Text('Saathi '),
               Text(
-                'Companion',
+                'Sampark',
                 style: TextStyle(color: Colors.green),
               ),
             ],

@@ -45,8 +45,8 @@ class _BloodPressureTrackerScreenState
   String userId;
   double averageDiastolic, averageSystolic, averagePulse;
   BloodPressureTracker bloodPressure;
+  Relative relative = Relative();
   getDocumentList() async {
-    Relative relative = Relative();
     relativeSnapshot = await FirebaseFirestore.instance
         .collection('relatives')
         .doc(userId)
@@ -131,12 +131,12 @@ class _BloodPressureTrackerScreenState
                                 borderRadius: BorderRadius.circular(10)),
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
-                              // child: BloodPressureChart(
-                              //   animate: true,
-                              //   userID: userId,
-                              //   type: 'diastolic',
-                              // ),
-                              child: Text('Hello'),
+                              child: BloodPressureChart(
+                                animate: true,
+                                userID: relative.elderUID,
+                                type: 'diastolic',
+                              ),
+                              // child: Text('Hello'),
                             ),
                             margin: EdgeInsets.all(8),
                           ),
@@ -186,12 +186,12 @@ class _BloodPressureTrackerScreenState
                                 borderRadius: BorderRadius.circular(10)),
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
-                              // child: BloodPressureChart(
-                              //   animate: true,
-                              //   userID: userId,
-                              //   type: 'systolic',
-                              // ),
-                              child: Text('Hello'),
+                              child: BloodPressureChart(
+                                animate: true,
+                                userID: relative.elderUID,
+                                type: 'systolic',
+                              ),
+                              // child: Text('Hello'),
                             ),
                             margin: EdgeInsets.all(8),
                           ),
@@ -241,12 +241,12 @@ class _BloodPressureTrackerScreenState
                                 borderRadius: BorderRadius.circular(10)),
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
-                              // child: BloodPressureChart(
-                              //   animate: true,
-                              //   userID: userId,
-                              //   type: 'pulse',
-                              // ),
-                              child: Text('Hello'),
+                              child: BloodPressureChart(
+                                animate: true,
+                                userID: relative.elderUID,
+                                type: 'pulse',
+                              ),
+                              // child: Text('Hello'),
                             ),
                             margin: EdgeInsets.all(8),
                           ),

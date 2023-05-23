@@ -43,8 +43,8 @@ class _WeightTrackerScreenState extends State<WeightTrackerScreen> {
   String userId;
   double averageWeight;
   WeightTracker weightTracker;
+  Relative relative = Relative();
   getDocumentList() async {
-    Relative relative = Relative();
     relativeSnapshot = await FirebaseFirestore.instance
         .collection('relatives')
         .doc(userId)
@@ -115,11 +115,11 @@ class _WeightTrackerScreenState extends State<WeightTrackerScreen> {
                                 borderRadius: BorderRadius.circular(10)),
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
-                              // child: WeightChart(
-                              //   animate: true,
-                              //   userID: userId,
-                              // ),
-                              child: Text('Hello'),
+                              child: WeightChart(
+                                animate: true,
+                                userID: relative.elderUID,
+                              ),
+                              // child: Text('Hello'),
                             ),
                             margin: EdgeInsets.all(8),
                           ),

@@ -1,5 +1,5 @@
 name: elderlycompanion
-description: A companion application for Elderly Care.
+description: A companion application for Saathi.
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `pub publish`. This is preferred for private packages.
@@ -39,7 +39,11 @@ dependencies:
   # sweet_alert_dialogs: ^0.2.0
   jitsi_meet: ^0.2.2
   permission_handler: ^10.2.0
-  # charts_flutter: ^0.9.0
+  # charts_flutter:
+  #   git:
+  #     url: https://github.com/google/charts.git
+  #     path: charts_flutter
+  charts_flutter: ^0.12.0
 
 dev_dependencies:
   flutter_test:

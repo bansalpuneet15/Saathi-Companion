@@ -45,8 +45,8 @@ class _BloodSugarTrackerScreenState extends State<BloodSugarTrackerScreen> {
   String userId;
   double averageValue;
   BloodSugarTracker bloodSugar;
+  Relative relative = Relative();
   getDocumentList() async {
-    Relative relative = Relative();
     relativeSnapshot = await FirebaseFirestore.instance
         .collection('relatives')
         .doc(userId)
@@ -116,11 +116,11 @@ class _BloodSugarTrackerScreenState extends State<BloodSugarTrackerScreen> {
                                 borderRadius: BorderRadius.circular(10)),
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
-                              // child: BloodSugarChart(
-                              //   animate: true,
-                              //   userID: userId,
-                              // ),
-                              child: Text('Hello'),
+                              child: BloodSugarChart(
+                                animate: true,
+                                userID: relative.elderUID,
+                              ),
+                              // child: Text('Hello'),
                             ),
                             margin: EdgeInsets.all(8),
                           ),

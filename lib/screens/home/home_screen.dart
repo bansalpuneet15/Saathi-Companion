@@ -215,7 +215,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 ),
                                 Padding(
                                   padding: EdgeInsets.only(top: 8.0),
-                                  child: Text('Save Documents'),
+                                  child: Text('View Documents'),
                                 )
                               ],
                             ),
